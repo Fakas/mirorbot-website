@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Miror B.ot! </title>
+<meta charset="UTF-8">
+<meta name="user_url" content="{user_url}">
+<meta name="announce_url" content="{announce_url}">
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="/static/css/announce.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<script src="/static/js/mirorbot.js"></script>
+</head>
+<body>
+<div class="mb_container">
+    <div title="mb_main" class="mb_main">
+        <header class="mb_header">
+            <div class="mb_header_container">
+                <div class="mb_header_left">
+                    <a class="mb_logo" href="/" title="header"> Miror B.ot </a>
+                </div>
+                <div class="mb_header_right">
+                    What would you like to do?
+                    {announce_button}
+                    {log_button}
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<div id="mb_upload_container" class="mb_upload_container">
+    <div id="mb_upload_display" class="mb_upload_display">Drag and drop (or click) here to upload</div>
+    <div class="mb_upload_action">
+        <form class="mb_form" id="mb_form" method="POST">
+            <input class="mb_upload" type="file" id="sound_upload" name="audio_file" accept="audio/mp3, application/ogg">
+            <input id="mb_token" type="hidden" name="api_token">
+        </form>
+    </div>
+    <div id="mb_sound_player" class="mb_sound_player">
+        <audio controls id="mb_announce_sound" src=""></audio>
+    </div>
+</div>
+</body>
+</html>
